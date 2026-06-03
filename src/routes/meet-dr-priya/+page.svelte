@@ -1,5 +1,5 @@
 <script>
-	import { BadgeCheck, CalendarHeart, ArrowRight, ShieldCheck, Users, MapPin, UserRound } from '@lucide/svelte';
+	import { BadgeCheck, CalendarHeart, ArrowRight, ShieldCheck, Users, MapPin } from '@lucide/svelte';
 	import Seo from '$lib/components/site/Seo.svelte';
 	import Section from '$lib/components/ui/Section.svelte';
 	import SectionHead from '$lib/components/ui/SectionHead.svelte';
@@ -7,14 +7,14 @@
 	import IconBadge from '$lib/components/ui/IconBadge.svelte';
 	import Eyebrow from '$lib/components/ui/Eyebrow.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import Photo from '$lib/components/ui/Photo.svelte';
+	import Img from '$lib/components/ui/Img.svelte';
 	import FinalCTA from '$lib/components/site/FinalCTA.svelte';
 	import { reveal } from '$lib/actions/reveal.js';
 
 	const team = [
-		{ name: 'Priya Raman, DDS', role: 'Pediatric dentist · Owner', bio: 'Board-certified pediatric dentist (ABPD). Twelve years with kids, two of her own, and a soft spot for the criers. She trained in hospital-based care at Children’s Mercy.', ask: 'Ask me about: the fastest way to lose a loose tooth', tone: 'green' },
-		{ name: 'Dani Okafor, RDH', role: 'Registered hygienist', bio: 'Dani has “tooth-tickling” down to an art and a playlist for every age. Kids ask for her by name.', ask: 'Ask me about: my terrible knock-knock jokes', tone: '' },
-		{ name: 'Marcus Lee', role: 'Front desk & first hellos', bio: 'The first voice you’ll hear. Marcus books the nervous-kid visits and remembers every comfort toy’s name.', ask: 'Ask me about: best taco truck in Brookside', tone: '' }
+		{ name: 'Priya Raman, DDS', role: 'Pediatric dentist · Owner', bio: 'Board-certified pediatric dentist (ABPD). Twelve years with kids, two of her own, and a soft spot for the criers. She trained in hospital-based care at Children’s Mercy.', ask: 'Ask me about: the fastest way to lose a loose tooth', img: '/images/dr-priya.jpg', position: 'center 22%' },
+		{ name: 'Dani Okafor, RDH', role: 'Registered hygienist', bio: 'Dani has “tooth-tickling” down to an art and a playlist for every age. Kids ask for her by name.', ask: 'Ask me about: my terrible knock-knock jokes', img: '/images/team-dani.jpg', position: 'center 25%' },
+		{ name: 'Marcus Lee', role: 'Front desk & first hellos', bio: 'The first voice you’ll hear. Marcus books the nervous-kid visits and remembers every comfort toy’s name.', ask: 'Ask me about: best taco truck in Brookside', img: '/images/team-marcus.jpg', position: 'center 20%' }
 	];
 </script>
 
@@ -44,10 +44,13 @@
 			</div>
 		</div>
 		<div use:reveal={{ delay: 80 }}>
-			<Photo
-				intent="Real photo of Dr. Priya at kid eye-level, high-fiving a patient in the open-bay treatment area"
-				tone="green"
+			<Img
+				src="/images/dr-priya.jpg"
+				alt="Dr. Priya Raman smiling in the treatment room"
 				aspect="4 / 3.4"
+				position="center 22%"
+				eager
+				class="shadow-md"
 			/>
 		</div>
 	</div>
@@ -95,10 +98,10 @@
 		heading="The people your kid will actually meet"
 	/>
 	<div class="mt-9 grid grid-cols-1 gap-[22px] sm:grid-cols-2 lg:grid-cols-3">
-		{#each team as { name, role, bio, ask, tone }, i (name)}
+		{#each team as { name, role, bio, ask, img, position }, i (name)}
 			<div use:reveal={{ delay: (i % 3) * 60 }}>
 				<Card class="h-full">
-					<Photo intent={`Consistent team headshot — ${name}, same warm light & background`} tone={tone === 'green' ? 'green' : ''} aspect="1" Icon={UserRound} class="mb-3.5" />
+					<Img src={img} alt={`${name} — ${role}`} aspect="1" {position} class="mb-3.5" />
 					<h3 class="font-display mb-0.5 text-[1.12rem] font-semibold text-ink-900">{name}</h3>
 					<p class="mb-2 text-[0.88rem] font-bold text-green-600">{role}</p>
 					<p class="mb-2.5 text-[0.94rem] leading-[1.5] text-ink-600">{bio}</p>

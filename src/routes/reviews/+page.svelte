@@ -7,7 +7,7 @@
 	import Tag from '$lib/components/ui/Tag.svelte';
 	import Avatar from '$lib/components/ui/Avatar.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import Photo from '$lib/components/ui/Photo.svelte';
+	import Img from '$lib/components/ui/Img.svelte';
 	import RatingChip from '$lib/components/ui/RatingChip.svelte';
 	import { reveal } from '$lib/actions/reveal.js';
 
@@ -81,9 +81,18 @@
 
 	<div use:reveal class="mt-[22px]">
 		<Card class="flex flex-wrap items-center gap-[18px]">
-			<div class="w-[220px] max-w-full shrink-0">
-				<Photo intent="Video review — parent and child on the lobby couch" aspect="16 / 10" Icon={Play} />
-			</div>
+			<button
+				class="group relative w-[220px] max-w-full shrink-0 overflow-hidden rounded-lg"
+				aria-label="Play video review"
+			>
+				<Img src="/images/review-couch.jpg" alt="A parent and child reading together at home" aspect="16 / 10" />
+				<span class="absolute inset-0 bg-[rgba(44,40,32,0.18)]"></span>
+				<span
+					class="absolute left-1/2 top-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-surface text-coral-500 shadow-md transition-transform duration-[260ms] ease-[var(--ease-pop)] group-hover:scale-110"
+				>
+					<Play size={20} strokeWidth={2} class="ml-0.5 fill-current" />
+				</span>
+			</button>
 			<div class="min-w-[220px] flex-1">
 				<Tag tone="green">First-ever visit · video</Tag>
 				<p class="my-3 text-[1.05rem] font-medium leading-[1.55] text-ink-800">

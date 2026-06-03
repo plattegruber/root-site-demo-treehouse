@@ -19,7 +19,7 @@
 	import IconBadge from '$lib/components/ui/IconBadge.svelte';
 	import Eyebrow from '$lib/components/ui/Eyebrow.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import Photo from '$lib/components/ui/Photo.svelte';
+	import Img from '$lib/components/ui/Img.svelte';
 	import FinalCTA from '$lib/components/site/FinalCTA.svelte';
 	import { reveal } from '$lib/actions/reveal.js';
 
@@ -65,9 +65,9 @@
 
 	<div use:reveal class="mt-[26px]">
 		<Card class="grid grid-cols-1 items-center gap-7 md:grid-cols-2">
-			<Photo
-				intent="Open-bay treatment area at kid eye-level, warm natural light"
-				tone="green"
+			<Img
+				src="/images/services-room.jpg"
+				alt="A bright, modern open-bay treatment area"
 				aspect="16 / 10"
 			/>
 			<div>

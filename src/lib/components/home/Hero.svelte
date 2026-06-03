@@ -2,7 +2,7 @@
 	import { HandHeart, CalendarHeart, Phone, Check, Play } from '@lucide/svelte';
 	import Eyebrow from '$lib/components/ui/Eyebrow.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import Photo from '$lib/components/ui/Photo.svelte';
+	import Img from '$lib/components/ui/Img.svelte';
 	import RatingChip from '$lib/components/ui/RatingChip.svelte';
 	import { reveal } from '$lib/actions/reveal.js';
 	import { practice } from '$lib/data/site.js';
@@ -42,21 +42,25 @@
 
 		<!-- Wide cinematic welcome-video screen with Pip + stickers -->
 		<div use:reveal class="stage relative mx-auto mb-[60px] mt-[78px] max-w-[1000px] max-[860px]:mt-16">
-			<div class="screen group relative">
-				<div class="flex h-full flex-col items-center justify-center gap-3">
-					<div class="pbtn">
+			<button class="screen group relative block w-full" aria-label="Play the welcome video — Meet Dr. Priya & Pip">
+				<img
+					src="/images/hero-welcome.jpg"
+					alt="Dr. Priya showing a dental mirror to a smiling young patient in the treatment chair"
+					fetchpriority="high"
+					decoding="async"
+					class="absolute inset-0 h-full w-full object-cover"
+				/>
+				<span class="absolute inset-0 bg-gradient-to-t from-[rgba(44,40,32,0.45)] via-transparent to-transparent"></span>
+				<span class="absolute inset-0 flex flex-col items-center justify-center gap-3">
+					<span class="pbtn">
 						<Play size={28} strokeWidth={2} class="ml-1 fill-current" />
-					</div>
+					</span>
 					<span
 						class="whitespace-nowrap rounded-pill bg-[rgba(44,40,32,0.62)] px-[15px] py-[7px] text-[0.9rem] font-bold text-white"
 						>Meet Dr. Priya &amp; Pip · 1:12</span
 					>
-				</div>
-				<span
-					class="absolute inset-x-4 bottom-4 text-center text-[0.8rem] italic text-green-700 opacity-80"
-					>Placeholder: warm welcome video, shot at kid eye-level</span
-				>
-			</div>
+				</span>
+			</button>
 
 			<img
 				src="/pip-peek.svg"
@@ -78,7 +82,12 @@
 			<span
 				class="polaroid absolute -bottom-[30px] -left-[34px] z-[6] w-[168px] -rotate-[5deg] rounded-md border border-line bg-surface px-2 pb-2.5 pt-2 shadow-md"
 			>
-				<Photo intent="Candid: a kid mid-laugh in the chair" aspect="1" class="!rounded-sm" />
+				<Img
+					src="/images/hero-polaroid.jpg"
+					alt="A young patient laughing"
+					aspect="1"
+					class="!rounded-sm"
+				/>
 				<span class="mt-1.5 block text-center text-[0.68rem] font-bold italic text-ink-500"
 					>brave first visit ★</span
 				>
@@ -102,12 +111,11 @@
 	.screen {
 		aspect-ratio: 16 / 7;
 		overflow: hidden;
+		cursor: pointer;
 		border: 1px solid var(--color-line);
 		border-radius: var(--radius-xl);
 		box-shadow: var(--shadow-lg);
-		background:
-			repeating-linear-gradient(45deg, rgba(62, 139, 87, 0.07) 0 18px, rgba(62, 139, 87, 0) 18px 36px),
-			var(--color-green-50);
+		background: var(--color-green-50);
 	}
 	.pbtn {
 		display: flex;

@@ -1,5 +1,5 @@
 <script>
-	import { BookOpen, ShieldCheck, Image as ImageIcon, ArrowRight } from '@lucide/svelte';
+	import { BookOpen, ShieldCheck, ArrowRight } from '@lucide/svelte';
 	import Seo from '$lib/components/site/Seo.svelte';
 	import PageHero from '$lib/components/site/PageHero.svelte';
 	import Section from '$lib/components/ui/Section.svelte';
@@ -7,15 +7,15 @@
 	import Tag from '$lib/components/ui/Tag.svelte';
 	import Avatar from '$lib/components/ui/Avatar.svelte';
 	import Button from '$lib/components/ui/Button.svelte';
-	import Photo from '$lib/components/ui/Photo.svelte';
+	import Img from '$lib/components/ui/Img.svelte';
 	import PillSoft from '$lib/components/ui/PillSoft.svelte';
 
 	const categories = ['Popular', 'Teething', 'Brushing', 'Anxiety', 'Nutrition'];
 
 	const posts = [
-		{ title: 'Thumb-sucking: when to worry (and when not to)', desc: 'Most kids stop on their own. Here’s the age that changes the math, and gentle ways to help.', cat: 'Teething', read: '5 min' },
-		{ title: 'Your anxious kid’s first visit: a calm prep plan', desc: 'A day-by-day script for the week before, from a pediatric dentist who sees nervous kids daily.', cat: 'Anxiety', read: '7 min' },
-		{ title: 'When do baby teeth come in? A parent’s timeline', desc: 'A simple chart, what’s normal, and the teething myths worth ignoring.', cat: 'Teething', read: '4 min' }
+		{ title: 'Thumb-sucking: when to worry (and when not to)', desc: 'Most kids stop on their own. Here’s the age that changes the math, and gentle ways to help.', cat: 'Teething', read: '5 min', img: '/images/blog-thumb-teething.jpg' },
+		{ title: 'Your anxious kid’s first visit: a calm prep plan', desc: 'A day-by-day script for the week before, from a pediatric dentist who sees nervous kids daily.', cat: 'Anxiety', read: '7 min', img: '/images/blog-thumb-anxiety.jpg' },
+		{ title: 'When do baby teeth come in? A parent’s timeline', desc: 'A simple chart, what’s normal, and the teething myths worth ignoring.', cat: 'Teething', read: '4 min', img: '/images/blog-thumb-timeline.jpg' }
 	];
 
 	/** @type {Record<string, 'honey' | 'teal' | 'green'>} */
@@ -68,7 +68,7 @@
 		</Card>
 	{:else}
 		<Card class="mb-[26px] grid grid-cols-1 items-center gap-[26px] md:grid-cols-[1fr_1.2fr]">
-			<Photo intent="Featured article hero — warm flat-lay of a toothbrush and a picture book" aspect="16 / 10" Icon={ImageIcon} />
+			<Img src="/images/blog-featured.jpg" alt="A flat-lay of colorful toothbrushes" aspect="16 / 10" />
 			<div>
 				<Tag tone="honey">Brushing · Featured</Tag>
 				<h2 class="t-h2 my-2.5">When should I actually start brushing my baby’s teeth?</h2>
@@ -90,9 +90,9 @@
 		</Card>
 
 		<div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-			{#each posts as { title, desc, cat: c, read } (title)}
+			{#each posts as { title, desc, cat: c, read, img } (title)}
 				<Card hoverable href="/parent-education" class="group flex h-full flex-col">
-					<Photo intent={`Article thumbnail — ${c}`} aspect="16 / 9" Icon={ImageIcon} class="mb-3.5" />
+					<Img src={img} alt={title} aspect="16 / 9" class="mb-3.5" />
 					<Tag tone={catTone[c]}>{c}</Tag>
 					<h3 class="font-display mb-1.5 mt-2.5 text-[1.22rem] font-semibold text-ink-900">{title}</h3>
 					<p class="mb-3 flex-1 text-[0.98rem] leading-[1.5] text-ink-600">{desc}</p>
