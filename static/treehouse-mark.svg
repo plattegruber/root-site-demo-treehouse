@@ -1,0 +1,21 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Treehouse mark">
+  
+  
+  <circle cx="22" cy="22" r="13" fill="#5AA571"></circle>
+  <circle cx="42" cy="22" r="13" fill="#3E8B57"></circle>
+  <circle cx="32" cy="15" r="12" fill="#7FBE8E"></circle>
+  <circle cx="32" cy="26" r="14" fill="#4A9462"></circle>
+  
+  <rect x="29" y="34" width="6" height="22" rx="3" fill="#A9763F"></rect>
+  
+  <rect x="20" y="30" width="24" height="16" rx="4" fill="#F2AC34"></rect>
+  
+  <path d="M17.5 31 L32 21 L46.5 31 Z" fill="#E85B40"></path>
+  
+  <rect x="29.5" y="37" width="5" height="9" rx="2.5" fill="#A5371F"></rect>
+  
+  <circle cx="24.5" cy="38" r="2.4" fill="#FFFDF8"></circle>
+  
+  <path d="M38 46 L38 56 M42 46 L42 56" stroke="#C89B5C" stroke-width="1.4" stroke-linecap="round"></path>
+  <path d="M38 49 L42 49 M38 52 L42 52 M38 55 L42 55" stroke="#C89B5C" stroke-width="1.4" stroke-linecap="round"></path>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pip the fox">
+  
+  
+  <path d="M21 16 L11 5 L9.5 25 Z" fill="#E08A3E"></path>
+  <path d="M43 16 L53 5 L54.5 25 Z" fill="#E08A3E"></path>
+  <path d="M19.5 16.5 L13.5 9.5 L12.7 22 Z" fill="#E85B40"></path>
+  <path d="M44.5 16.5 L50.5 9.5 L51.3 22 Z" fill="#E85B40"></path>
+  
+  <path d="M32 59&#xA;           C20.5 55 12.5 45.5 11.4 31.5&#xA;           C10.8 23 14.5 16.5 21 15.5&#xA;           L32 20 L43 15.5&#xA;           C49.5 16.5 53.2 23 52.6 31.5&#xA;           C51.5 45.5 43.5 55 32 59 Z" fill="#EF9B47"></path>
+  
+  <path d="M32 59&#xA;           C24.5 56 19.5 50.5 18.2 41.5&#xA;           C24 39 40 39 45.8 41.5&#xA;           C44.5 50.5 39.5 56 32 59 Z" fill="#FFFDF8"></path>
+  <path d="M16.5 30 C14 31 12.5 34 13 37.5 C15.5 36.5 18 35.5 19.5 33.5 Z" fill="#FFFDF8" opacity="0.85"></path>
+  <path d="M47.5 30 C50 31 51.5 34 51 37.5 C48.5 36.5 46 35.5 44.5 33.5 Z" fill="#FFFDF8" opacity="0.85"></path>
+  
+  <ellipse cx="24.5" cy="31" rx="2.7" ry="3.1" fill="#2C2820"></ellipse>
+  <ellipse cx="39.5" cy="31" rx="2.7" ry="3.1" fill="#2C2820"></ellipse>
+  <circle cx="25.5" cy="29.9" r="0.9" fill="#FFFDF8"></circle>
+  <circle cx="40.5" cy="29.9" r="0.9" fill="#FFFDF8"></circle>
+  
+  <path d="M32 41.5 C29.6 41.5 28.2 43.2 29.2 44.8 C30 46 34 46 34.8 44.8 C35.8 43.2 34.4 41.5 32 41.5 Z" fill="#2C2820"></path>
+  
+  <path d="M27 47.3 C29 50.4 35 50.4 37 47.3" stroke="#2C2820" stroke-width="1.5" stroke-linecap="round" fill="none"></path>
+</svg>

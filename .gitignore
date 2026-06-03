@@ -1,0 +1,22 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/build
+/.svelte-kit
+/package
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Misc
+.DS_Store
+Thumbs.db
+/.vscode/*
+!/.vscode/extensions.json

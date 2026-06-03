@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://treehouse.demo.root.site/sitemap.xml

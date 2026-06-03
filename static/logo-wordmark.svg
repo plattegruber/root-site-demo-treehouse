@@ -1,0 +1,17 @@
+<svg width="248" height="60" viewBox="0 0 248 60" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Treehouse Pediatric Dentistry">
+  
+  <g transform="translate(2,-2) scale(1.0)">
+    <circle cx="22" cy="22" r="13" fill="#5AA571"></circle>
+    <circle cx="42" cy="22" r="13" fill="#3E8B57"></circle>
+    <circle cx="32" cy="15" r="12" fill="#7FBE8E"></circle>
+    <circle cx="32" cy="26" r="14" fill="#4A9462"></circle>
+    <rect x="29" y="34" width="6" height="22" rx="3" fill="#A9763F"></rect>
+    <rect x="20" y="30" width="24" height="16" rx="4" fill="#F2AC34"></rect>
+    <path d="M17.5 31 L32 21 L46.5 31 Z" fill="#E85B40"></path>
+    <rect x="29.5" y="37" width="5" height="9" rx="2.5" fill="#A5371F"></rect>
+    <circle cx="24.5" cy="38" r="2.4" fill="#FFFDF8"></circle>
+  </g>
+  
+  <text x="72" y="33" font-family="Fredoka, &#39;Trebuchet MS&#39;, sans-serif" font-weight="600" font-size="27" letter-spacing="-0.3" fill="#2C2820">Treehouse</text>
+  <text x="73" y="49" font-family="Mulish, sans-serif" font-weight="700" font-size="10.5" letter-spacing="2.2" fill="#3E8B57">PEDIATRIC DENTISTRY</text>
+</svg>
