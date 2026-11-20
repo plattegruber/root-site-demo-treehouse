@@ -5,23 +5,21 @@
 		Siren,
 		Sprout,
 		HandHeart,
-		Phone,
 		CalendarHeart,
 		ArrowRight
 	} from '@lucide/svelte';
 	import Button from '$lib/components/ui/Button.svelte';
 	import IconBadge from '$lib/components/ui/IconBadge.svelte';
-	import { practice } from '$lib/data/site.js';
 
-	/** @type {Array<{ Icon: import('svelte').Component, tone: 'green' | 'honey' | 'teal' | 'coral', title: string, sub: string, reply: string, action: 'call' | 'book' | 'nervous' }>} */
+	/** @type {Array<{ Icon: import('svelte').Component, tone: 'green' | 'honey' | 'teal' | 'coral', title: string, sub: string, reply: string, action: 'info' | 'book' | 'nervous' }>} */
 	const intents = [
 		{
 			Icon: Siren,
 			tone: 'coral',
 			title: "It's an emergency",
 			sub: 'Knocked-out tooth, bad fall, swelling',
-			reply: `Call us now at ${practice.phoneDisplay} — we keep same-day spots open.`,
-			action: 'call'
+			reply: 'This is a fictional demo, not a dental clinic. It cannot help with an emergency.',
+			action: 'info'
 		},
 		{
 			Icon: Sprout,
@@ -57,7 +55,7 @@
 		bg-green-600 px-5 py-3.5 text-base font-semibold text-white shadow-lg
 		transition-[transform,background-color] duration-[160ms] hover:-translate-y-0.5 hover:bg-green-700"
 	onclick={toggle}
-	aria-label="Chat with us"
+	aria-label="Open demo chat"
 	aria-expanded={open}
 >
 	{#if open}<X size={20} strokeWidth={2} />{:else}<MessagesSquare size={20} strokeWidth={2} />Need a
@@ -76,7 +74,7 @@
 			<img src="/pip-mark.svg" alt="" class="h-[34px]" />
 			<div>
 				<div class="font-display text-[1.02rem] font-semibold">Hi, I'm Pip</div>
-				<div class="text-[0.8rem] text-white/80">What brings you in today?</div>
+				<div class="text-[0.8rem] text-white/80">Fictional demo chat</div>
 			</div>
 			<button
 				class="ml-auto text-white/85 hover:text-white"
@@ -113,15 +111,11 @@
 						onclick={() => (picked = null)}>← Back</button
 					>
 					<p class="t-body mb-4">{intent.reply}</p>
-					{#if intent.action === 'call'}
-						<Button href={practice.phoneHref} block Icon={Phone}
-							>Call {practice.phoneDisplay}</Button
-						>
-					{:else if intent.action === 'book'}
+					{#if intent.action === 'book'}
 						<Button href="/book" block Icon={CalendarHeart} onclick={() => (open = false)}
-							>Open booking</Button
+							>Open demo booking</Button
 						>
-					{:else}
+					{:else if intent.action === 'nervous'}
 						<Button href="/nervous-kids" block IconRight={ArrowRight} onclick={() => (open = false)}
 							>See how we help nervous kids</Button
 						>

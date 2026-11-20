@@ -29,7 +29,7 @@
 
 <Seo
 	title="Reviews & Stories — Treehouse Pediatric Dentistry"
-	description="Real Brookside families, tagged by the fear they walked in with. 4.9 stars across 510 Google reviews. Find a story that sounds like your kid."
+	description="Sample stories and a sample rating illustrate how reviews could be presented."
 	path="/reviews"
 />
 
@@ -39,9 +39,9 @@
 >
 	<div class="mx-auto max-w-[1180px] px-7">
 		<Eyebrow Icon={Star}>Reviews &amp; stories</Eyebrow>
-		<h1 class="t-h1 mt-2.5">Real families, tagged by the fear they walked in with.</h1>
+		<h1 class="t-h1 mt-2.5">Fictional family stories, grouped by visit concerns.</h1>
 		<p class="t-lead mt-4 max-w-[34em]">
-			Find a story that sounds like your kid. Every review is from a verified patient family.
+			These examples are fictional and do not reflect real reviews or patient outcomes.
 		</p>
 		<div class="mt-[18px]"><RatingChip /></div>
 	</div>

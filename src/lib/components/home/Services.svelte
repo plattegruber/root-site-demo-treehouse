@@ -39,8 +39,8 @@
 		{
 			Icon: Siren,
 			tone: 'coral',
-			title: 'Same-day emergencies',
-			body: 'Knocked-out tooth or a bad fall? Call us — we keep same-day spots open.',
+			title: 'Emergency visit example',
+			body: 'This demo does not provide urgent dental care.',
 			href: '/book'
 		},
 		{

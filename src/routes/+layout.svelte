@@ -8,6 +8,9 @@
 </script>
 
 <div class="flex min-h-screen flex-col">
+	<div class="bg-ink-900 px-4 py-2 text-center text-sm font-bold text-white">
+		Fictional demo. No patient care.
+	</div>
 	<Nav />
 	<main class="flex-1">
 		{@render children()}

@@ -73,7 +73,7 @@
 			<div>
 				<Stars n={5} class="text-[1.1rem]" />
 				<div class="mt-1.5 text-[0.85rem] text-ink-500">
-					Based on <b class="font-extrabold text-ink-700">510 Google reviews</b>
+					Illustrative rating · fictional reviews
 				</div>
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 					<div class="mb-3 flex items-center justify-between">
 						<Stars n={5} class="text-[1.05rem]" />
 						<span class="font-display text-[0.78rem] font-semibold tracking-[0.02em] text-ink-400"
-							>Google</span
+							>Fictional example</span
 						>
 					</div>
 					<p class="mb-[18px] flex-1 text-[1.02rem] font-medium leading-[1.55] text-ink-800">{quote}</p>

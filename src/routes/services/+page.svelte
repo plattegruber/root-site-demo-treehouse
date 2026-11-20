@@ -32,14 +32,14 @@
 		{ Icon: Ear, tone: 'teal', title: 'Sensory-friendly & special-needs', body: 'A visit planned around your kid.' },
 		{ Icon: Baby, tone: 'honey', title: 'Infant tongue & lip ties', body: 'Feeding or latch trouble? We assess ties and explain the options.' },
 		{ Icon: Apple, tone: 'green', title: 'Diet & habit coaching', body: 'Thumb-sucking, sippy cups, and snack swaps — practical, no shaming.' },
-		{ Icon: Siren, tone: 'coral', title: 'Same-day emergencies', body: 'Knocked-out tooth? Call us now.' },
+		{ Icon: Siren, tone: 'coral', title: 'Emergency visit example', body: 'This demo does not provide urgent dental care.' },
 		{ Icon: Stethoscope, tone: 'green', title: 'Growth & referral guidance', body: 'Honest calls on braces and beyond.' }
 	];
 </script>
 
 <Seo
 	title="Services — Treehouse Pediatric Dentistry"
-	description="Plain-language pediatric dental care: first visits, cleanings, sealants, gentle fillings, sensory-friendly care, and same-day emergencies. The price before we start."
+	description="Plain-language pediatric dental care: first visits, cleanings, sealants, gentle fillings, sensory-friendly care, and an example emergency service. The price before we start."
 	path="/services"
 />
 
